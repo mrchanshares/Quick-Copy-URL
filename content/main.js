@@ -1,4 +1,4 @@
-
+﻿
 
 // alert('Youtube ShowTitle - Show the video title in the Search box as it changes');
 
@@ -39,9 +39,12 @@ setInterval(function () {
         }
         else {
             // (641) [ Online Compilation Concert #29 ] #OHMYGIRL | SINCE 2015 ~ 2021 - YouTube
+            // [MV] Apink(에이핑크) _ The Wave(네가 손짓해주면)
             showTitle = thisTitle;
             showTitle = showTitle.replace(' - YouTube', '');
-            showTitle = showTitle.substring(showTitle.indexOf(')') + 1);
+            if (showTitle.charAt(0) == '(') {
+                showTitle = showTitle.substring(showTitle.indexOf(')') + 1);
+            }
             thisElement.innerText = showTitle;
             thisElement.setAttribute('style', 'font-size:20px ;');
             thisElement.focus();

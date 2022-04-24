@@ -4,7 +4,7 @@
     "version": "1.5",
 
     "description": "Show the video title in the Search box as it changes",
-    "homepage_url": "https://github.com/vantezzen/quick-copy-url",
+    "homepage_url": "",
     "icons": {
         "32": "icons/icon-32.png",
         "48": "icons/icon-48.png"
