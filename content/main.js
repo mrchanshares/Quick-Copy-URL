@@ -7,6 +7,7 @@
 // 20220424
 lastTitle = '';
 thisTitle = '';
+showTitle = '';
 thisId = 'search'; //'pageTitle';
 // thisElement = document.getElementById(thisId);
 // allowDuplicate = true;
@@ -37,10 +38,15 @@ setInterval(function () {
         if (thisTitle == lastTitle) {
         }
         else {
-
-            thisElement.innerText = thisTitle;
+            // (641) [ Online Compilation Concert #29 ] #OHMYGIRL | SINCE 2015 ~ 2021 - YouTube
+            showTitle = thisTitle;
+            showTitle = showTitle.replace(' - YouTube', '');
+            showTitle = showTitle.substring(showTitle.indexOf(')') + 1);
+            thisElement.innerText = showTitle;
+            thisElement.setAttribute('style', 'font-size:20px ;');
+            thisElement.focus();
             lastTitle = thisTitle;
         }
     }
-    console.log('quick copy url')
+    // console.log('quick copy url')
 }, 1000);
